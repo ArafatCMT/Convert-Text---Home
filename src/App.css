@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.title{
+  /* color: #424D61; */
+  font-style: oblique;
+}
+.mode-icon:hover{
+  cursor: pointer;
+}
+.form-control{
+  border-radius: 15px;
+}
+.form-control.dark::placeholder{
+  color: white;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.form-control.dark:focus{
+  box-shadow: none;
+}
