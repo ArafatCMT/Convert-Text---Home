@@ -3,8 +3,8 @@ import Alart from './components/Alart';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, {useState} from 'react';
-import About from './components/About';
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+// import About from './components/About';
+// import { BrowserRouter as Router, Routes, Route } from "react-router";
 
 function App() {
     const [mode , setMode] = useState('dark')
@@ -41,17 +41,18 @@ function App() {
     }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" aboutText="About Us" mode={mode} toggleMode={toggleMode}/>
     <div className="container">
       <Alart alart={alart}/>
-    <Routes>
+      <TextForm heading="Enter the text to analyze below" ShowAlart={ShowAlart} mode={mode}/>
+    {/* <Routes>
         <Route path="/" element={<TextForm heading="Enter the text to analyze below" ShowAlart={ShowAlart} mode={mode}/>}></Route>
         <Route path="/about" element={<About/>}></Route>
-      {/* <About/> */}
-    </Routes>
+      <About/>
+    </Routes> */}
     </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
